@@ -46,7 +46,16 @@ const Loading = ({ percent }: { percent: number }) => {
     <>
       <div className="loading-header">
         <a href="/#" className="loader-title" data-cursor="disable">
-          Logo
+          <img
+            src="/images/logo.png"
+            alt="afaqxmafaz logo"
+            className="navbar-logo-img"
+            onError={(e) => {
+              (e.currentTarget as HTMLImageElement).style.display = "none";
+              (e.currentTarget.nextElementSibling as HTMLElement).style.display = "inline";
+            }}
+          />
+          <span className="navbar-logo-text" style={{ display: "none" }}>AN.dev</span>
         </a>
         <div className={`loaderGame ${clicked && "loader-out"}`}>
           <div className="loaderGame-container">
@@ -62,8 +71,8 @@ const Loading = ({ percent }: { percent: number }) => {
       <div className="loading-screen">
         <div className="loading-marquee">
           <Marquee>
-            <span> A Creative Developer</span> <span>A Creative Designer</span>
-            <span> A Creative Developer</span> <span>A Creative Designer</span>
+            <span>SOFTWARE ENGINEERING AT THE UNIVERSITY OF HARIPUR • </span>
+            <span>SOFTWARE ENGINEERING AT THE UNIVERSITY OF HARIPUR • </span>
           </Marquee>
         </div>
         <div

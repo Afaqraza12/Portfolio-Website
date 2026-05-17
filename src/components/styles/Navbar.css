@@ -31,14 +31,36 @@
   cursor: pointer;
 }
 .navbar-connect {
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  opacity: 0.75;
+  transition: opacity 0.2s;
+}
+.navbar-connect:hover {
+  opacity: 1;
+}
+.navbar-emails {
   position: absolute;
   display: none;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  font-size: 15px;
-  letter-spacing: 1px;
-  font-weight: 500;
+  white-space: nowrap;
+  gap: 0;
+}
+.navbar-email-sep {
+  opacity: 0.4;
+  font-size: 13px;
+}
+.navbar-logo-img {
+  height: 22px;
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
+}
+.navbar-logo-text {
+  display: none; /* shown via JS onError fallback */
 }
 .navbar-title {
   font-weight: 700;
@@ -62,8 +84,10 @@
   }
 }
 @media only screen and (min-width: 900px) {
-  .navbar-connect {
-    display: block;
+  .navbar-emails {
+    display: flex;
+    align-items: center;
+    gap: 4px;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -75,7 +99,10 @@
     font-size: 16px;
   }
   .navbar-connect {
-    font-size: 16px;
+    font-size: 14px;
+  }
+  .navbar-email-sep {
+    font-size: 14px;
   }
   .navbar-title {
     font-size: 18px;

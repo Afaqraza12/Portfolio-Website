@@ -43,15 +43,35 @@ const Navbar = () => {
     <>
       <div className="header">
         <a href="/#" className="navbar-title" data-cursor="disable">
-          AN.dev
+          <img
+            src="/images/logo.png"
+            alt="AN.dev logo"
+            className="navbar-logo-img"
+            onError={(e) => {
+              // Fallback to text if image not yet placed in /public/images/
+              (e.currentTarget as HTMLImageElement).style.display = "none";
+              (e.currentTarget.nextElementSibling as HTMLElement).style.display = "inline";
+            }}
+          />
+          <span className="navbar-logo-text">AN.dev</span>
         </a>
-        <a
-          href="mailto:example@mail.com"
-          className="navbar-connect"
-          data-cursor="disable"
-        >
-          example@mail.com
-        </a>
+        <div className="navbar-emails">
+          <a
+            href="mailto:afaqraza510@gmail.com"
+            className="navbar-connect"
+            data-cursor="disable"
+          >
+            afaqraza510@gmail.com
+          </a>
+          <span className="navbar-email-sep"> | </span>
+          <a
+            href="mailto:mafaznoor17@gmail.com"
+            className="navbar-connect"
+            data-cursor="disable"
+          >
+            mafaznoor17@gmail.com
+          </a>
+        </div>
         <ul>
           <li>
             <a data-href="#about" href="#about">
