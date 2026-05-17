@@ -4,11 +4,11 @@ const About = () => {
   return (
     <div className="about-section" id="about">
       <div className="about-me">
-        <h3 className="title">About Me</h3>
+        <h3 className="title">ABOUT US</h3>
         <p className="para">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
-          dolores numquam iusto Ratione earum ducimus autem id iure pariatur
-          dolorum quae maiores.
+          We are a dynamic Software Engineering duo from the University of Haripur (4th Semester), combining cutting-edge development with clean, intuitive user experiences.
+          <br /><br />
+          While Afaq tackles complex logic, state management, and mobile architectures using Flutter and Dart, Mafaz shapes the vision, visual identity, and pixel-perfect layouts as our UI/UX specialist. Together, we translate complex problems into elegant, functional digital products.
         </p>
       </div>
     </div>

@@ -5,8 +5,7 @@ const Career = () => {
     <div className="career-section section-container">
       <div className="career-container">
         <h2>
-          My career <span>&</span>
-          <br /> experience
+          Our <span>Journey</span>
         </h2>
         <div className="career-info">
           <div className="career-timeline">
@@ -15,43 +14,37 @@ const Career = () => {
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Position In Company</h4>
-                <h5>Company Name</h5>
+                <h4>Software Engineering Undergrads</h4>
+                <h5>University of Haripur</h5>
               </div>
-              <h3>20XX</h3>
+              <h3>2024 - PRESENT</h3>
             </div>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-              labore sit non ipsum temporibus quidem, deserunt eaque officiis
-              mollitia ratione suscipit repellat.
+              Deepening expertise in Core Computing, Object-Oriented Programming, and Software Architectures while maintaining a focus on real-world practical implementations.
             </p>
           </div>
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Position In Company</h4>
-                <h5>Company Name</h5>
+                <h4>Flavor Fetch Development</h4>
+                <h5>Open Source Project</h5>
               </div>
-              <h3>20XX</h3>
+              <h3>2026</h3>
             </div>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-              labore sit non ipsum temporibus quidem, deserunt eaque officiis
-              mollitia ratione suscipit repellat.
+              Engineered a high-performance C++ recipe management application, handling complex local File I/O storage architectures integrated with REST API database systems.
             </p>
           </div>
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Position In Company</h4>
-                <h5>Company Name</h5>
+                <h4>Cross-Platform & UI Design Research</h4>
+                <h5>Independent Study</h5>
               </div>
-              <h3>NOW</h3>
+              <h3>2026</h3>
             </div>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-              labore sit non ipsum temporibus quidem, deserunt eaque officiis
-              mollitia ratione suscipit repellat.
+              Diving deep into modern declarative UI workflows. Afaq mastering advanced Dart 3.0 reactive patterns while Mafaz establishes cohesive interactive design standards.
             </p>
           </div>
         </div>

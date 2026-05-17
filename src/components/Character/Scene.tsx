@@ -51,8 +51,13 @@ const Scene = () => {
 
       const light = setLighting(scene);
       let progress = setProgress((value) => setLoading(value));
-      const { loadCharacter } = setCharacter(renderer, scene, camera);
+      const { loadCharacter } = setCharacter(
+        renderer,
+        scene,
+        camera
+      );
 
+      // Load the primary (male) character — existing logic unchanged
       loadCharacter().then((gltf) => {
         if (gltf) {
           const animations = setAnimations(gltf);
@@ -74,6 +79,8 @@ const Scene = () => {
           );
         }
       });
+
+
 
       let mouse = { x: 0, y: 0 },
         interpolation = { x: 0.1, y: 0.2 };
@@ -108,6 +115,8 @@ const Scene = () => {
       }
       const animate = () => {
         requestAnimationFrame(animate);
+
+        // Male character head tracking (existing)
         if (headBone) {
           handleHeadRotation(
             headBone,
@@ -119,6 +128,9 @@ const Scene = () => {
           );
           light.setPointLight(screenLight);
         }
+
+
+
         const delta = clock.getDelta();
         if (mixer) {
           mixer.update(delta);
@@ -158,3 +170,4 @@ const Scene = () => {
 };
 
 export default Scene;
+

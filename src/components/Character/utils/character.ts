@@ -3,6 +3,18 @@ import { DRACOLoader, GLTF, GLTFLoader } from "three-stdlib";
 import { setCharTimeline, setAllTimeline } from "../../utils/GsapScroll";
 import { decryptFile } from "./decrypt";
 
+// Clay material shared across all female character meshes to match the
+// existing male character's grey/white physical material aesthetic.
+const createClayMaterial = () =>
+  new THREE.MeshPhysicalMaterial({
+    color: new THREE.Color(0xd4cfc9),
+    roughness: 0.85,
+    metalness: 0.0,
+    clearcoat: 0.1,
+    clearcoatRoughness: 0.5,
+    reflectivity: 0.1,
+  });
+
 const setCharacter = (
   renderer: THREE.WebGLRenderer,
   scene: THREE.Scene,
@@ -55,6 +67,7 @@ const setCharacter = (
       }
     });
   };
+
 
   return { loadCharacter };
 };

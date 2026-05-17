@@ -3,6 +3,7 @@ import "./App.css";
 
 const CharacterModel = lazy(() => import("./components/Character"));
 const MainContainer = lazy(() => import("./components/MainContainer"));
+import FloatingHearts from "./components/FloatingHearts";
 import { LoadingProvider } from "./context/LoadingProvider";
 
 const App = () => {
@@ -16,6 +17,7 @@ const App = () => {
             </Suspense>
           </MainContainer>
         </Suspense>
+        <FloatingHearts />
       </LoadingProvider>
     </>
   );

@@ -1,0 +1,40 @@
+.floating-hearts-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.floating-heart {
+  position: absolute;
+  bottom: -50px;
+  opacity: 0;
+  animation: floatUpAndFade linear forwards;
+  filter: drop-shadow(0 0 8px rgba(255, 158, 187, 0.4));
+}
+
+@keyframes floatUpAndFade {
+  0% {
+    transform: translateY(0) scale(0.5) rotate(0deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.8;
+    transform: translateY(-15vh) scale(1) rotate(15deg);
+  }
+  50% {
+    transform: translateY(-50vh) scale(1.1) rotate(-15deg);
+    opacity: 0.6;
+  }
+  85% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-110vh) scale(0.8) rotate(10deg);
+    opacity: 0;
+  }
+}
